@@ -13,7 +13,7 @@
 }
 
 .card-modal-content {
-	background: gray;
+	background: #e8ecee;
 	position: absolute;
 	top: 50%;
 	left: 50%;
@@ -77,4 +77,29 @@
 	color: darkblue;
 	width: 98%;
 	margin-bottom: 5px;
+}
+
+.description-textarea {
+	width: 93%;
+	margin: 0 0 10px 35px;
+	padding: 10px 12px;
+	box-sizing: border-box;
+	font-size: 1.4rem;
+	color: lightgrey;
+	border: 2px solid rgba(0, 0, 255, 0);
+	border-radius: 3px;
+	outline: none;
+}
+
+.close-modal {
+	height: 4rem;
+	width: 4rem;
+	font-size: 2rem;
+	border-radius: 10rem;
+	line-height: 4rem;
+
+	&:hover {
+		background-color: #70848f30;
+		color: #193345;
+	}
 }

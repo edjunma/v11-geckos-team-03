@@ -3,10 +3,14 @@ import React from 'react';
 class CardModal extends React.Component {
 	constructor(props) {
 		super(props);
-		this.state = {};
+		this.state = {
+			description: ''
+		};
 	}
 
 	render() {
+		const { toggleModal } = this.props;
+		const { description } = this.state;
 		return (
 			<div className='card-modal'>
 				<div className='card-modal-content'>
@@ -14,7 +18,9 @@ class CardModal extends React.Component {
 						<h4>
 							<span>Sample Card</span>
 						</h4>
-						<button>Close Card</button>
+						<button onClick={toggleModal}>
+							<i className='fas fa-times close-modal'></i>Close Card
+						</button>
 					</div>
 					<div className='row'>
 						<div className='left-col'>
@@ -31,10 +37,18 @@ class CardModal extends React.Component {
 										<button>Save</button>
 									</div>
 								</section>
-                <div className="right-col">
-                  <p>Add To Card</p>
-                  <button></button>
-                </div>
+								<div className='right-col'>
+									<aside className='col'>
+										<p className='aside-modal-title'>Add To Card</p>
+										<button>Checklist</button>
+										<button>Label</button>
+
+										<p className='aside-modal-title'>Actions</p>
+										<button>
+											<span>Delete Card</span>
+										</button>
+									</aside>
+								</div>
 							</div>
 						</div>
 					</div>
